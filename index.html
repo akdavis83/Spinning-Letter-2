@@ -9,7 +9,25 @@ canvas {
   height: 100vh;
   display: block;
 }
-
+.invisible-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .invisible-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* make sure it's on top of other elements */
+    opacity: 0; /* make it invisible */
+    cursor: pointer; /* keep the pointer cursor to indicate it's clickable */
+  }
 </style>
 <canvas id="canvas"></canvas>
 <!--
@@ -338,3 +356,8 @@ function main() {
 main();
 
 </script>
+
+<div class="invisible-button">
+  
+    <button class="invisible-link" onclick="window.location.href='https://akdavis83.github.io/Spinning-Letter/';"> </button>
+    </div>
